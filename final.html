@@ -2,18 +2,29 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <title>Disimpan</title>
+  <title>Sampai Di Sini</title>
+
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/theme-polaroid.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- QR LIB -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.4/build/qrcode.min.js"></script>
 </head>
 <body>
 
-<div id="ending">
-  <div class="polaroid">
-    <img src="assets/photo.jpg" alt="foto" />
-    <p>Disimpan hari ini.</p>
-  </div>
+<div class="final-wrap">
+  <p class="final-text">
+    Terima kasih sudah sampai di sini.  
+    Semoga hari ini terasa lebih hangat.
+  </p>
+
+  <canvas id="qr"></canvas>
 </div>
+
+<canvas id="confetti"></canvas>
+
+<audio id="bgMusic" src="assets/music.mp3" loop></audio>
 
 <script src="js/final.js"></script>
 </body>
