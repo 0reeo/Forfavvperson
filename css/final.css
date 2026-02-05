@@ -31,3 +31,23 @@ body {
   padding: 10px 10px 30px;
   width: 200px;
 }
+.hidden {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.final-photo {
+  width: 180px;
+  max-width: 70%;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  background: white;
+  padding: 10px 10px 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.final-photo.show {
+  opacity: 1;
+  transform: translateY(0);
+}
