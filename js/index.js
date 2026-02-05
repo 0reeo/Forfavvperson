@@ -1,10 +1,17 @@
-document.body.style.background = "#f6f2ee";
+const PASSWORD = "1002";
 
 const lock = document.getElementById("lock");
 const countdown = document.getElementById("countdown");
+const timerEl = document.getElementById("timer");
+const lockMsg = document.getElementById("lockMsg");
 
-if (!lock) {
-  alert("JS KELOAD, tapi elemen HTML tidak ditemukan");
-} else {
-  alert("JS KELOAD DAN HTML TERBACA");
-}
+document.getElementById("unlockBtn").onclick = () => {
+  const val = document.getElementById("password").value;
+  if (val === PASSWORD) {
+    lock.classList.add("hidden");
+    countdown.classList.remove("hidden");
+    timerEl.textContent = "Berhasil dibuka 🤍";
+  } else {
+    lockMsg.textContent = "Kode salah";
+  }
+};
