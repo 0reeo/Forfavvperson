@@ -1,18 +1,23 @@
 .polaroid-card {
   background: white;
-  padding: 14px;
-  width: 260px;
-  box-shadow: 0 10px 25px rgba(0,0,0,.15);
+  padding: 14px 14px 24px;
+  width: 260px;              /* KUNCI UKURAN */
+  margin: 60px auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,.2);
+  border-radius: 6px;
   text-align: center;
 }
 
 .polaroid-card img {
-  width: 100%;
+  width: 100%;               /* NGIKUT CARD */
+  height: auto;
   display: block;
+  border-radius: 4px;
   margin-bottom: 10px;
 }
 
 #typing {
   font-size: 14px;
+  line-height: 1.6;
   white-space: pre-line;
 }
