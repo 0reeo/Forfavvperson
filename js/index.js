@@ -7,10 +7,16 @@ const lockMsg = document.getElementById("lockMsg");
 
 document.getElementById("unlockBtn").onclick = () => {
   const val = document.getElementById("password").value;
+
   if (val === PASSWORD) {
     lock.classList.add("hidden");
     countdown.classList.remove("hidden");
-    timerEl.textContent = "Berhasil dibuka 🤍";
+    timerEl.textContent = "Berhasil dibuka 💙";
+
+    setTimeout(() => {
+      window.location.href = "gift.html";
+    }, 1500);
+
   } else {
     lockMsg.textContent = "Kode salah";
   }
