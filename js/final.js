@@ -1,37 +1,60 @@
-/* MUSIC */
-const music = document.getElementById("bgMusic");
-window.addEventListener("click", () => music.play(), { once: true });
+// ===== QR =====
+const qrCanvas = document.getElementById("qr");
 
-/* QR */
-const finalLink = window.location.href;
 QRCode.toCanvas(
-  document.getElementById("qr"),
-  finalLink,
-  { width: 160 }
+  qrCanvas,
+  "https://oreeo.github.io/Forfavperson/",
+  {
+    width: 140,
+    margin: 1,
+    color: {
+      dark: "#000000",
+      light: "#ffffff"
+    }
+  }
 );
 
-/* CONFETTI */
+// ===== MUSIC =====
+const music = document.getElementById("bgMusic");
+document.body.addEventListener("click", () => {
+  music.play();
+}, { once: true });
+
+// ===== CONFETTI =====
 const canvas = document.getElementById("confetti");
 const ctx = canvas.getContext("2d");
-canvas.width = innerWidth;
-canvas.height = innerHeight;
 
-const dots = Array.from({ length: 100 }, () => ({
-  x: Math.random() * canvas.width,
-  y: Math.random() * canvas.height,
-  r: Math.random() * 3 + 2,
-  d: Math.random() * 2 + 1
-}));
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
-(function confetti(){
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-  dots.forEach(p=>{
-    ctx.beginPath();
-    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-    ctx.fillStyle="rgba(255,182,193,.7)";
-    ctx.fill();
-    p.y+=p.d;
-    if(p.y>canvas.height) p.y=0;
+let confetti = [];
+
+for (let i = 0; i < 80; i++) {
+  confetti.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    r: Math.random() * 4 + 2,
+    d: Math.random() * 2 + 1
   });
-  requestAnimationFrame(confetti);
-})();
+}
+
+function drawConfetti() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "rgba(0,0,0,0.15)";
+
+  confetti.forEach(c => {
+    ctx.beginPath();
+    ctx.arc(c.x, c.y, c.r, 0, Math.PI * 2);
+    ctx.fill();
+
+    c.y += c.d;
+    if (c.y > canvas.height) {
+      c.y = -5;
+      c.x = Math.random() * canvas.width;
+    }
+  });
+
+  requestAnimationFrame(drawConfetti);
+}
+
+drawConfetti();
