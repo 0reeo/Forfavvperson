@@ -61,3 +61,8 @@ type();
 btn.onclick = () => {
   window.location.href = "final.html";
 };
+const music = document.getElementById("bgMusic");
+
+window.addEventListener("click", () => {
+  music.play();
+}, { once: true });
