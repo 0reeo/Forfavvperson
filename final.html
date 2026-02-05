@@ -3,13 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <title>Sampai Di Sini</title>
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="css/final.css" />
-
-  <!-- QR LIB -->
-  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.4/build/qrcode.js"></script>
 </head>
 <body>
 
@@ -18,14 +14,48 @@
     Terima kasih sudah sampai di sini.<br>
     Semoga hari ini terasa lebih hangat.
   </p>
-
-  <canvas id="qr"></canvas>
 </div>
 
 <canvas id="confetti"></canvas>
 
 <audio id="bgMusic" src="assets/music.mp3" loop></audio>
 
-<script src="js/final.js"></script>
+<script>
+/* ===== MUSIK (PLAY SETELAH TAP) ===== */
+const music = document.getElementById("bgMusic");
+document.body.addEventListener("click", () => {
+  music.play().catch(()=>{});
+}, { once:true });
+
+/* ===== CONFETTI SIMPLE ===== */
+const canvas = document.getElementById("confetti");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const pieces = Array.from({length: 120}).map(() => ({
+  x: Math.random() * canvas.width,
+  y: Math.random() * canvas.height,
+  r: Math.random() * 4 + 2,
+  d: Math.random() * 1 + 0.5
+}));
+
+function drawConfetti(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  ctx.fillStyle = "#d4a373";
+  pieces.forEach(p => {
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.r, 0, Math.PI*2);
+    ctx.fill();
+    p.y += p.d;
+    if(p.y > canvas.height) p.y = -10;
+  });
+  requestAnimationFrame(drawConfetti);
+}
+
+drawConfetti();
+</script>
+
 </body>
 </html>
