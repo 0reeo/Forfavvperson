@@ -25,3 +25,9 @@ body {
   left: 0;
   pointer-events: none;
 }
+
+.final-photo {
+  background: white;
+  padding: 10px 10px 30px;
+  width: 200px;
+}
