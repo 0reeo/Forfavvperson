@@ -1,4 +1,7 @@
-const message = `Hari ini disimpan
+const text = `
+Selamat bertambah usia
+
+Hari ini disimpan
 seperti satu foto kecil.
 
 Tidak terlalu ramai,
@@ -39,33 +42,22 @@ Cukup disimpan,
 seperti foto ini.
 `;
 
-const openBtn = document.getElementById("openGiftBtn");
-const content = document.getElementById("content");
-const typingText = document.getElementById("typingText");
-const music = document.getElementById("bgMusic");
-
 let i = 0;
+const typing = document.getElementById("typing");
+const btn = document.getElementById("nextBtn");
 
-openBtn.onclick = () => {
-  openBtn.style.display = "none";
-  content.classList.remove("hidden");
-  music.play();
-  typeText();
-  drawQR();
-};
-
-function typeText(){
-  if (i < message.length){
-    typingText.innerHTML += message[i] === "\n" ? "<br>" : message[i];
+function type() {
+  if (i < text.length) {
+    typing.innerHTML += text.charAt(i);
     i++;
-    setTimeout(typeText, 45);
+    setTimeout(type, 55);
+  } else {
+    btn.classList.remove("hidden");
   }
 }
 
-function drawQR(){
-  const canvas = document.getElementById("qr");
-  QRCode.toCanvas(canvas,
-    "https://oreeo.github.io/Birthdaygift/final.html",
-    { width:160, margin:1 }
-  );
-}
+type();
+
+btn.onclick = () => {
+  window.location.href = "final.html";
+};
