@@ -50,7 +50,7 @@ function type() {
   if (i < text.length) {
     typing.innerHTML += text.charAt(i);
     i++;
-    setTimeout(type, 55);
+    setTimeout(type, 65);
   } else {
     btn.classList.remove("hidden");
   }
