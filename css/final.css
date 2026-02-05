@@ -26,11 +26,6 @@ body {
   pointer-events: none;
 }
 
-.final-photo {
-  background: white;
-  padding: 10px 10px 30px;
-  width: 200px;
-}
 .hidden {
   opacity: 0;
   transform: translateY(10px);
