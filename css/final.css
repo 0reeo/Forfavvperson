@@ -1,43 +1,27 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
-  width: 100vw;
-  height: 100vh;
-  background: #f6f1eb;
-  font-family: Georgia, serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  background: #f8f4ec;
+  font-family: serif;
 }
 
 .final-wrap {
-  position: relative;
-  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 20px;
+  padding: 24px;
 }
 
 .final-text {
-  font-size: 1.15rem;
-  line-height: 1.8;
-  color: #3b3b3b;
-  margin-bottom: 20px;
-}
-
-#qr {
-  width: 140px;
-  height: 140px;
-  margin: 0 auto;
-  display: block;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 420px;
 }
 
 #confetti {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
   pointer-events: none;
-  z-index: 1;
 }
