@@ -2,26 +2,21 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <title>Sebuah Hadiah</title>
+  <title>Sedikit Cerita</title>
+
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/theme-polaroid.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
-<button id="openGiftBtn">Buka Hadiah</button>
-
-<div id="content" class="hidden">
-  <p id="typingText"></p>
-
-  <div class="qr-section">
-    <p>Jika kamu penasaran…</p>
-    <canvas id="qr"></canvas>
-  </div>
+<div class="polaroid-card">
+  <img src="assets/img1.jpg" alt="memory" />
+  <p id="typing"></p>
 </div>
 
-<audio id="bgMusic" src="assets/music.mp3"></audio>
+<button id="nextBtn" class="hidden">Lanjut</button>
 
-<script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.4/build/qrcode.min.js"></script>
 <script src="js/gift.js"></script>
 </body>
 </html>
