@@ -2,6 +2,12 @@ console.log("FINAL JS JALAN");
 
 /* ================== WAIT DOM ================== */
 window.addEventListener("load", () => {
+  const photo = document.querySelector(".final-photo");
+
+  setTimeout(() => {
+    photo.classList.add("show");
+  }, 3000); // 3 detik
+});
 
   /* ===== MUSIC ===== */
   const music = document.getElementById("bgMusic");
