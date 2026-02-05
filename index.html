@@ -1,20 +1,32 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
   <title>Sebuah Hari</title>
+
   <link rel="stylesheet" href="css/base.css" />
+  <link id="theme-style" rel="stylesheet" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
 
-<div id="lock">
-  <input id="password" placeholder="Kode" />
-  <button id="unlockBtn">Buka</button>
-  <p id="lockMsg"></p>
-</div>
+<div class="center">
 
-<div id="countdown" class="hidden">
-  <p id="timer"></p>
+  <!-- LOCK -->
+  <div id="lock" class="card">
+    <h2>Untuk kamu</h2>
+    <input id="password" placeholder="Kode kecil" />
+    <button id="unlockBtn">Buka</button>
+    <p id="lockMsg"></p>
+  </div>
+
+  <!-- COUNTDOWN -->
+  <div id="countdown" class="card hidden">
+    <p>Tunggu sebentar ya…</p>
+    <h3 id="timer"></h3>
+  </div>
+
 </div>
 
 <script src="js/index.js"></script>
