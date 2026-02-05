@@ -1,32 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   height: 100vh;
   background: #f6f1eb;
-  font-family: 'Georgia', serif;
+  font-family: Georgia, serif;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
 .final-wrap {
   text-align: center;
   z-index: 2;
-  animation: fadeIn 2s ease forwards;
 }
 
 .final-text {
   font-size: 1.2rem;
   line-height: 1.8;
   color: #3b3b3b;
-  margin-bottom: 24px;
-  max-width: 280px;
+  margin-bottom: 20px;
 }
 
 #qr {
-  width: 120px;
-  height: 120px;
-  margin: auto;
+  width: 140px;
+  height: 140px;
 }
 
 #confetti {
@@ -34,15 +35,4 @@ body {
   inset: 0;
   pointer-events: none;
   z-index: 1;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
