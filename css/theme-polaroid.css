@@ -59,3 +59,36 @@
     transform: translateY(0);
   }
 }
+
+.gift-wrap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.next-wrap {
+  margin-top: 10px;
+}
+
+.next-btn {
+  background: #e7dfd4;
+  border: none;
+  padding: 10px 26px;
+  border-radius: 999px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.next-btn:hover {
+  background: #d8cfc2;
+  transform: translateY(-1px);
+}
+
+.hidden {
+  display: none;
+}
