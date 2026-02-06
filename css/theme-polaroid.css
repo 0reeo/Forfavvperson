@@ -18,9 +18,17 @@
 }
 
 #typing {
-  font-size: 14px;
-  line-height: 1.6;
-  white-space: pre-line;
+  animation: textFade 1s ease;
+}
+
+@keyframes textFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+  
 }
 
 .polaroid-card {
