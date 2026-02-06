@@ -6,6 +6,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+   background: 
+    radial-gradient(circle at top, #fdfaf5, #f4eee6);
 }
 
 .hidden {
@@ -22,10 +24,6 @@ body {
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0,0,0,.1);
   width: 280px;
-}
-
- background:
-    radial-gradient(circle at top, #fdfaf5, #f4eee6);
 }
 
 input {
