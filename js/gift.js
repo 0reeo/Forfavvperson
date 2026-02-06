@@ -1,44 +1,35 @@
 const text = `
-Selamat bertambah usia
+Selamat bertambah usia.  
+Hari ini disimpan seperti satu foto kecil.
 
-Hari ini disimpan
-seperti satu foto kecil.
+Tidak terlalu ramai,  
+tidak juga berisik.  
+Hanya cukup untuk diingat.
 
-Tidak terlalu ramai,
-tidak juga berisik.
-Hanya cukup
-untuk diingat.
+Waktu berjalan, pelan tapi pasti.  
+Dan tanpa sadar, kamu sudah sejauh ini.
 
-Waktu berjalan,
-pelan tapi pasti.
-Dan tanpa sadar,
-kamu sudah sejauh ini.
-
-Ada hari yang mudah,
-ada yang melelahkan.
-Ada rencana yang jadi,
+Ada hari yang mudah.  
+Ada yang melelahkan.  
+Ada rencana yang jadi,  
 ada yang harus dilepas.
 
 Tapi kamu tetap melangkah.
 
-Semoga langkahmu
-selalu menemukan alasan
-untuk diteruskan.
-Semoga hatimu
-selalu punya ruang
+Semoga langkahmu selalu menemukan alasan  
+untuk diteruskan.  
+Semoga hatimu selalu punya ruang  
 untuk bernapas.
 
-Dan jika suatu hari
-kamu merasa sendirian,
-ingat saja:
-pernah ada seseorang
-yang mendoakanmu
-secara diam-diam.
+Dan jika suatu hari kamu merasa sendirian,  
+ingat saja:  
+pernah ada seseorang  
+yang mendoakanmu secara diam-diam.
 
-Tanpa nama.
+Tanpa nama.  
 Tanpa ingin diketahui.
 
-Cukup disimpan,
+Cukup disimpan,  
 seperti foto ini.
 `;
 
