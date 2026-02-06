@@ -60,7 +60,8 @@ function type() {
       setTimeout(type, 65);
     }
   } else {
-    btn.classList.add("show");
+    btn.classList.remove("hidden");
+btn.classList.add("show");
   }
 }
 type();
