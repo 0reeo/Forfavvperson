@@ -1,4 +1,4 @@
-/* ================== POLAROID CARD ================== */
+/* ===== POLAROID CARD ===== */
 .polaroid-card {
   background: white;
   padding: 14px 14px 24px;
@@ -23,42 +23,37 @@
   white-space: pre-line;
 }
 
-/* ================== NEXT BUTTON ================== */
+/* ===== NEXT BUTTON (PAKAI INI) ===== */
 .next-btn {
-  margin: 16px auto 0;
-  background: #ede6db;
+  margin: 14px auto 0;
+  background: #e7dfd4;
   border: none;
-  padding: 9px 26px;
+  padding: 8px 26px;
   border-radius: 999px;
-  font-size: 12px;
-  letter-spacing: 1.5px;
-  color: #555;
+  font-size: 13px;
+  letter-spacing: 1px;
   cursor: pointer;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
-  transition: all 0.35s ease;
+  transition: all 0.4s ease;
 }
 
-/* hover lembut */
 .next-btn:hover {
-  background: #e0d6c8;
+  background: #d8cfc2;
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
-/* default: belum muncul */
-#nextBtn {
+/* hidden tapi siap animasi */
+.hidden {
   opacity: 0;
-  transform: translateY(10px) scale(0.98);
+  transform: translateY(8px);
   pointer-events: none;
 }
 
-/* setelah typing selesai */
+/* muncul setelah typing selesai */
 #nextBtn.show {
   opacity: 1;
-  transform: translateY(0) scale(1);
+  transform: translateY(0);
   pointer-events: auto;
 }
-
 /* ================== FINAL PAGE (AMAN, TIDAK KEPAKAI DI GIFT) ================== */
 .final-wrap {
   height: 100vh;
