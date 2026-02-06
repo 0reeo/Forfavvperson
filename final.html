@@ -1,3 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sampai Di Sini</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/final.css">
+</head>
+<body>
+
+<div class="final-wrap">
+  <p id="typing" class="final-text"></p>
+
+  <img src="assets/photo.jpg"
+       alt="dia"
+       class="final-photo hidden">
+</div>
+
+<canvas id="confetti"></canvas>
+
+<audio id="bgMusic" src="assets/music.mp3" loop></audio>
+
+<!-- SCRIPT DI SINI -->
 <script>
 /* ===== ELEMENT ===== */
 const typingEl = document.getElementById("typing");
@@ -27,11 +50,11 @@ document.body.addEventListener("click", () => {
 /* ===== TYPING ===== */
 function typeText(){
   if(i < text.length){
-    typingEl.innerHTML += text.charAt(i);
+    typingEl.innerHTML += text[i] === "\n" ? "<br>" : text[i];
     i++;
     setTimeout(typeText, 50);
   } else {
-    showPhoto(); // ⬅️ PANGGIL FOTO SETELAH TEKS SELESAI
+    showPhoto();
   }
 }
 
@@ -50,11 +73,11 @@ const ctx = canvas.getContext("2d");
 canvas.width = innerWidth;
 canvas.height = innerHeight;
 
-const pieces = Array.from({length: 120}).map(() => ({
-  x: Math.random()*canvas.width,
-  y: Math.random()*canvas.height,
-  r: Math.random()*4+2,
-  d: Math.random()*1+0.5
+const pieces = Array.from({length:120}).map(()=>({
+  x:Math.random()*canvas.width,
+  y:Math.random()*canvas.height,
+  r:Math.random()*4+2,
+  d:Math.random()*1+0.5
 }));
 
 (function confetti(){
@@ -73,3 +96,6 @@ const pieces = Array.from({length: 120}).map(() => ({
 /* ===== START ===== */
 typeText();
 </script>
+
+</body>
+</html>
