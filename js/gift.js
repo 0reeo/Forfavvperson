@@ -47,27 +47,25 @@ const typing = document.getElementById("typing");
 const btn = document.getElementById("nextBtn");
 const music = document.getElementById("bgMusic");
 
-/* ===== TYPING EFFECT ===== */
-function typeText() {
+/* ===== TYPE EFFECT ===== */
+function type() {
   if (i < text.length) {
-    typing.textContent += text.charAt(i);
+    typing.innerHTML += text.charAt(i);
     i++;
-    setTimeout(typeText, 60);
+    setTimeout(type, 65);
   } else {
-    // tombol muncul dengan halus
-    btn.classList.remove("hidden");
+    // 🔑 INI KUNCI NYA
     btn.classList.add("show");
   }
 }
-
-typeText();
+type();
 
 /* ===== BUTTON ===== */
 btn.addEventListener("click", () => {
   window.location.href = "final.html";
 });
 
-/* ===== MUSIC (MOBILE SAFE) ===== */
+/* ===== MUSIC (AUTO SETELAH TAP PERTAMA) ===== */
 document.body.addEventListener("click", () => {
   music.play().catch(() => {});
 }, { once: true });
