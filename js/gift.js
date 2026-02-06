@@ -48,24 +48,29 @@ const btn = document.getElementById("nextBtn");
 const music = document.getElementById("bgMusic");
 
 /* ===== TYPE EFFECT ===== */
-function type() {
+function typeText() {
   if (i < text.length) {
     typing.innerHTML += text.charAt(i);
     i++;
-    setTimeout(type, 65);
+    setTimeout(typeText, 65);
   } else {
-    // 🔑 INI KUNCI NYA
+    // 🔥 FIX UTAMA
+    btn.classList.remove("hidden");
     btn.classList.add("show");
   }
 }
-type();
+typeText();
 
 /* ===== BUTTON ===== */
 btn.addEventListener("click", () => {
   window.location.href = "final.html";
 });
 
-/* ===== MUSIC (AUTO SETELAH TAP PERTAMA) ===== */
-document.body.addEventListener("click", () => {
-  music.play().catch(() => {});
-}, { once: true });
+/* ===== MUSIC (SETELAH TAP PERTAMA) ===== */
+document.body.addEventListener(
+  "click",
+  () => {
+    music.play().catch(() => {});
+  },
+  { once: true }
+);
