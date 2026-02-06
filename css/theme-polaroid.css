@@ -40,10 +40,13 @@
 }
 
 #typing {
-  animation: textFade 1s ease;
-  line-height: 1.9;
-  text-align: left;
-  padding: 0 4px;
+  font-size: 14px;
+  line-height: 2;
+  text-align: center;
+  white-space: pre-line;
+
+  max-width: 190px;
+  margin: 0 auto;
 }
 
 @keyframes textFade {
