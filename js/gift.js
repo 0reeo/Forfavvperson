@@ -47,30 +47,41 @@ const typing = document.getElementById("typing");
 const btn = document.getElementById("nextBtn");
 const music = document.getElementById("bgMusic");
 
-/* ===== TYPE EFFECT ===== */
-function typeText() {
+/* ===== TYPE EFFECT (LEMBUT) ===== */
+function type() {
   if (i < text.length) {
     typing.innerHTML += text.charAt(i);
     i++;
-    setTimeout(typeText, 65);
+
+    // jeda napas di baris baru
+    if (text.charAt(i - 1) === "\n") {
+      setTimeout(type, 350);
+    } else {
+      setTimeout(type, 65);
+    }
   } else {
-    // 🔥 FIX UTAMA
-    btn.classList.remove("hidden");
     btn.classList.add("show");
   }
 }
-typeText();
+type();
 
 /* ===== BUTTON ===== */
 btn.addEventListener("click", () => {
   window.location.href = "final.html";
 });
 
-/* ===== MUSIC (SETELAH TAP PERTAMA) ===== */
-document.body.addEventListener(
-  "click",
-  () => {
-    music.play().catch(() => {});
-  },
-  { once: true }
-);
+/* ===== MUSIC (FADE IN SETELAH TAP) ===== */
+document.body.addEventListener("click", () => {
+  music.volume = 0;
+  music.play().catch(()=>{});
+
+  let vol = 0;
+  const fade = setInterval(() => {
+    if (vol < 0.4) {
+      vol += 0.02;
+      music.volume = vol;
+    } else {
+      clearInterval(fade);
+    }
+  }, 150);
+}, { once: true });
