@@ -10,12 +10,19 @@
 </head>
 <body>
 
-<div class="polaroid-card">
-  <img src="assets/img1.jpg" alt="memory" />
-  <p id="typing"></p>
-</div>
+<div class="gift-wrap">
 
-<button id="nextBtn" class="hidden">Lanjut</button>
+  <div class="polaroid-card">
+    <img src="assets/img1.jpg" alt="memory" />
+    <p id="typing"></p>
+  </div>
+
+  <!-- TOMBOL LANJUT -->
+  <div class="next-wrap hidden" id="nextWrap">
+    <button class="next-btn" onclick="goNext()">Lanjut</button>
+  </div>
+
+</div>
 
 <!-- AUDIO -->
 <audio id="bgMusic" src="assets/music.mp3" loop></audio>
