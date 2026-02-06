@@ -53,7 +53,6 @@
   
 }
 
-/* ===== NEXT BUTTON (PAKAI INI) ===== */
 /* ================== NEXT BUTTON ================== */
 .next-btn {
   margin: 16px auto 0;
@@ -88,6 +87,7 @@
   transform: translateY(0) scale(1);
   pointer-events: auto;
 }
+
 /* ================== FINAL PAGE (AMAN, TIDAK KEPAKAI DI GIFT) ================== */
 .final-wrap {
   height: 100vh;
