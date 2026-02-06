@@ -45,24 +45,29 @@ seperti foto ini.
 let i = 0;
 const typing = document.getElementById("typing");
 const btn = document.getElementById("nextBtn");
+const music = document.getElementById("bgMusic");
 
-function type() {
+/* ===== TYPING EFFECT ===== */
+function typeText() {
   if (i < text.length) {
-    typing.innerHTML += text.charAt(i);
+    typing.textContent += text.charAt(i);
     i++;
-    setTimeout(type, 65);
+    setTimeout(typeText, 60);
   } else {
+    // tombol muncul dengan halus
     btn.classList.remove("hidden");
+    btn.classList.add("show");
   }
 }
 
-type();
+typeText();
 
-btn.onclick = () => {
+/* ===== BUTTON ===== */
+btn.addEventListener("click", () => {
   window.location.href = "final.html";
-};
-const music = document.getElementById("bgMusic");
+});
 
-window.addEventListener("click", () => {
-  music.play();
+/* ===== MUSIC (MOBILE SAFE) ===== */
+document.body.addEventListener("click", () => {
+  music.play().catch(() => {});
 }, { once: true });
