@@ -41,6 +41,8 @@
 
 #typing {
   animation: textFade 1s ease;
+  line-height: 1.9;
+  margin-bottom: 6px;
 }
 
 @keyframes textFade {
