@@ -37,12 +37,25 @@ body {
 input {
   width: 100%;
   padding: 10px;
-  margin-top: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 13px;
+  text-align: center;
 }
 
 button {
-  margin-top: 14px;
-  padding: 10px;
+  margin-top: 12px;
   width: 100%;
+  padding: 10px;
+  border-radius: 999px;
+  border: none;
+  background: #ede6db;
+  font-size: 12px;
+  letter-spacing: 1px;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #e0d6c8;
 }
