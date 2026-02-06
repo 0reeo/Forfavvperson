@@ -90,5 +90,19 @@
 }
 
 .hidden {
-  display: none;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+}
+
+#nextBtn {
+  margin: 20px auto 0;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.6s ease;
+}
+
+#nextBtn.show {
+  opacity: 1;
+  transform: translateY(0);
 }
