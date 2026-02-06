@@ -24,34 +24,38 @@
 }
 
 /* ===== NEXT BUTTON (PAKAI INI) ===== */
+/* ================== NEXT BUTTON ================== */
 .next-btn {
-  margin: 14px auto 0;
-  background: #e7dfd4;
+  margin: 16px auto 0;
+  background: #ede6db;
   border: none;
-  padding: 8px 26px;
+  padding: 9px 26px;
   border-radius: 999px;
-  font-size: 13px;
-  letter-spacing: 1px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: #555;
   cursor: pointer;
-  transition: all 0.4s ease;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+  transition: all 0.35s ease;
 }
 
 .next-btn:hover {
-  background: #d8cfc2;
+  background: #e0d6c8;
   transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
-/* hidden tapi siap animasi */
-.hidden {
+/* default: belum muncul */
+#nextBtn {
   opacity: 0;
-  transform: translateY(8px);
+  transform: translateY(10px) scale(0.98);
   pointer-events: none;
 }
 
-/* muncul setelah typing selesai */
+/* setelah typing selesai */
 #nextBtn.show {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
   pointer-events: auto;
 }
 /* ================== FINAL PAGE (AMAN, TIDAK KEPAKAI DI GIFT) ================== */
