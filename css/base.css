@@ -24,6 +24,10 @@ body {
   width: 280px;
 }
 
+ background:
+    radial-gradient(circle at top, #fdfaf5, #f4eee6);
+}
+
 input {
   width: 100%;
   padding: 10px;
