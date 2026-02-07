@@ -26,6 +26,24 @@ body {
   width: 280px;
 }
 
+.memory-title {
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: lowercase;
+  color: #666;
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.memory-title::after {
+  content: "";
+  width: 32px;
+  height: 1px;
+  background: #ccc;
+  display: block;
+  margin: 10px auto 0;
+}
+
   .hint {
   font-size: 13px;
   color: #777;
