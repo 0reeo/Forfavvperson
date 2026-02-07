@@ -60,22 +60,6 @@ body::before {
   z-index: 1;
 }
 
-@keyframes confettiMove {
-  from {
-    background-position:
-      0 0,
-      40px 60px,
-      80px 20px,
-      20px 90px;
-  }
-  to {
-    background-position:
-      120px 240px,
-      160px 300px,
-      200px 260px,
-      140px 320px;
-  }
-}
 /* animasi masuk + miring */
 @keyframes cardIn {
   from {
