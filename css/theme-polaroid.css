@@ -17,43 +17,36 @@ body::before {
   pointer-events: none;
 
   background-image:
-    radial-gradient(circle, rgba(255,255,255,.8) 1px, transparent 3px),
-    radial-gradient(circle, rgba(255,220,180,.6) 1px, transparent 3px),
-    radial-gradient(circle, rgba(200,220,255,.6) 1px, transparent 3px);
+    radial-gradient(circle, rgba(255,255,255,.95) 2.4px, transparent 4px),
+    radial-gradient(circle, rgba(255,220,180,.7) 2.2px, transparent 4px),
+    radial-gradient(circle, rgba(200,220,255,.7) 2.2px, transparent 4px),
+    radial-gradient(circle, rgba(220,255,230,.7) 2.2px, transparent 4px);
 
-  background-size:
-    260px 260px,
-    360px 360px,
-    460px 460px;
-
+  background-size: 160px 160px;
   background-position:
     0 0,
-    120px 180px,
-    260px 120px;
+    80px 40px,
+    40px 100px,
+    120px 140px;
 
-  animation:
-    sparkleFloat 30s linear infinite,
-    sparkleBlink 4s ease-in-out infinite;
+  animation: sparkleMove 28s linear infinite;
 }
 
-@keyframes sparkleFloat {
+@keyframes sparkleMove {
   from {
     background-position:
       0 0,
-      120px 180px,
-      260px 120px;
+      80px 40px,
+      40px 100px,
+      120px 140px;
   }
   to {
     background-position:
-      400px 1400px,
-      800px 1800px,
-      1000px 2000px;
+      160px 320px,
+      240px 360px,
+      200px 420px,
+      280px 480px;
   }
-}
-
-@keyframes sparkleBlink {
-  0%,100% { opacity: .35; }
-  50% { opacity: .85; }
 }
 
 .polaroid-card {
