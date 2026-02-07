@@ -8,55 +8,56 @@ body {
   overflow-x: hidden;
 }
 
-/* CONFETTI BACKGROUND */body::before {
+/* CONFETTI BACKGROUND */
+body::before {
   content: "";
   position: fixed;
   inset: 0;
   z-index: 0;
   pointer-events: none;
 
-  /* sparkle halus */
+  /* sparkle lebih kelihatan */
   background-image:
-    radial-gradient(circle, rgba(255,255,255,.9) 1px, transparent 2px),
-    radial-gradient(circle, rgba(255,240,200,.7) 1px, transparent 2px),
-    radial-gradient(circle, rgba(220,230,255,.7) 1px, transparent 2px);
+    radial-gradient(circle, rgba(255,255,255,.9) 1.5px, transparent 3px),
+    radial-gradient(circle, rgba(255,215,180,.6) 1.5px, transparent 3px),
+    radial-gradient(circle, rgba(200,220,255,.6) 1.5px, transparent 3px);
 
   background-size:
-    140px 140px,
-    220px 220px,
-    320px 320px;
+    160px 160px,
+    260px 260px,
+    360px 360px;
 
   background-position:
     0 0,
-    80px 120px,
-    140px 60px;
+    120px 180px,
+    200px 100px;
 
   animation:
-    sparkleMove 28s linear infinite,
-    sparklePulse 4.5s ease-in-out infinite;
+    sparkleMove 24s linear infinite,
+    sparklePulse 3.5s ease-in-out infinite;
 }
 
 @keyframes sparkleMove {
   from {
     background-position:
       0 0,
-      80px 120px,
-      140px 60px;
+      120px 180px,
+      200px 100px;
   }
   to {
     background-position:
-      260px 620px,
-      420px 840px,
-      560px 900px;
+      300px 800px,
+      500px 1100px,
+      700px 1200px;
   }
 }
 
 @keyframes sparklePulse {
   0%, 100% {
-    opacity: .45;
+    opacity: .35;
   }
   50% {
-    opacity: 1;
+    opacity: .85;
   }
 }
 
