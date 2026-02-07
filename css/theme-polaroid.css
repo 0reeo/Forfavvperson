@@ -28,12 +28,13 @@
 @keyframes cardIn {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(40px) scale(0.96);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
+}
   
 .memory-title {
   font-size: 12px;
@@ -45,25 +46,15 @@
 
 #typing {
   font-size: 14px;
-  line-height: 2;
-  text-align: center;
+  line-height: 1.7;      /* lebih nyaman dibaca */
+  text-align: left;     /* kayak surat, bukan quote */
   white-space: pre-line;
 
-  max-width: 190px;
+  max-width: 200px;     /* dikit lebih lega */
   margin: 0 auto;
 }
 
-@keyframes textFade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-  
-}
-
-/* ================== NEXT BUTTON ================== */
+===== */
 .next-btn {
   margin: 16px auto 0;
   background: #ede6db;
