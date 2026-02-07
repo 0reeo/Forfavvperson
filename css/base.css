@@ -108,14 +108,14 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  pointer-events: none;
   z-index: 0;
+  pointer-events: none;
 
   background-image:
-    radial-gradient(circle, rgba(255,180,180,.35) 2px, transparent 3px),
-    radial-gradient(circle, rgba(180,200,255,.35) 2px, transparent 3px),
-    radial-gradient(circle, rgba(255,220,180,.35) 2px, transparent 3px),
-    radial-gradient(circle, rgba(200,255,220,.35) 2px, transparent 3px);
+    radial-gradient(circle, rgba(255,180,180,.45) 2px, transparent 3px),
+    radial-gradient(circle, rgba(180,200,255,.45) 2px, transparent 3px),
+    radial-gradient(circle, rgba(255,220,180,.45) 2px, transparent 3px),
+    radial-gradient(circle, rgba(200,255,220,.45) 2px, transparent 3px);
 
   background-size: 120px 120px;
   background-position:
@@ -123,4 +123,6 @@ body::before {
     40px 60px,
     80px 20px,
     20px 90px;
+
+  animation: confettiMove 18s linear infinite;
 }
