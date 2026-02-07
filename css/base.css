@@ -104,12 +104,6 @@ button:hover {
   background: #e0d6c8;
 }
 
-body {
-  background: #f6f2ec;
-  position: relative;
-  overflow-x: hidden;
-}
-
 body::before {
   content: "";
   position: fixed;
