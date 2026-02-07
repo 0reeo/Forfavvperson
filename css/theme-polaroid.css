@@ -9,6 +9,10 @@
   text-align: center;
 }
 
+.polaroid-card {
+  transform: rotate(-0.6deg);
+}
+
 .polaroid-card img {
   width: 100%;
   height: auto;
