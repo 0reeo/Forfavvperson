@@ -2,12 +2,16 @@ body {
   margin: 0;
   height: 100vh;
   font-family: "Georgia", serif;
-  background: #f6f2ee;
+
   display: flex;
   justify-content: center;
   align-items: center;
-   background: 
+
+  background:
     radial-gradient(circle at top, #fdfaf5, #f4eee6);
+
+  position: relative;
+  overflow-x: hidden;
 }
 
 .hidden {
