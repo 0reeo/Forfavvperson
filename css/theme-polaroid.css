@@ -208,22 +208,6 @@ body::after {
   }
 }
 
-/* garis tipis ala foto lama */
-.photo-slot::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 6px;
-
-  background: linear-gradient(
-    180deg,
-    rgba(255,255,255,0.12),
-    rgba(0,0,0,0.08)
-  );
-
-  pointer-events: none;
-}
-
 /* ===== PHOTO SLOT (FINAL) ===== */
 .photo-slot {
   width: 100%;
