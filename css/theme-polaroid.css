@@ -223,9 +223,11 @@ body::after {
 
 .photo-slot img {
   width: 100%;
-  height: 100%;
+  height: auto;        /* ✅ KUNCI UTAMA */
+  max-height: 150px;   /* ngikut tinggi slot */
   object-fit: cover;
   object-position: center;
+  display: block;
 
   filter:
     contrast(1)
