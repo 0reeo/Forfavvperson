@@ -246,6 +246,34 @@ body::after {
 }
 
 /* ===============================
+   FORCE FOTO POLAROID FIX (FINAL)
+================================ */
+
+.polaroid-card {
+  align-items: flex-start;
+}
+
+/* KUNCI UKURAN SLOT */
+.polaroid-card .photo-slot {
+  width: 200px !important;
+  height: 150px !important;
+  max-height: 150px !important;
+  margin: 0 auto 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* PAKSA IMG NGIKUT SLOT */
+.polaroid-card .photo-slot img {
+  width: 100% !important;
+  height: 100% !important;
+  max-height: 100% !important;
+  object-fit: cover !important;
+  object-position: center;
+  display: block;
+}
+
+/* ===============================
    TITLE
 ================================ */
 .memory-title {
